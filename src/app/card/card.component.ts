@@ -13,8 +13,12 @@ export class CardComponent {
 
   getClassName() {
     const rank = this.rank.toLowerCase();
-    const suit = this.suitIcons[this.suit];
+    const suit = this.suit;
 
     return `rank-${rank} ${suit}`;
+  }
+
+  getIcon(suit: string) {
+    return this.suitIcons[suit];
   }
 }
