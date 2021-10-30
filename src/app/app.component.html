@@ -1,3 +1,12 @@
 <div class="playingCards faceImages">
   <app-card *ngFor="let card of cards" [rank]="card.rank" [suit]="card.suit"></app-card>
 </div>
+
+<hr>
+
+<p>Score: {{score}}</p>
+<button type="button" (click)="getCard()" [disabled]="isUserLose() || isUserWin()">Give another card</button>
+<button type="button" (click)="resetGame()">Reset</button>
+
+<p *ngIf="isUserWin()">You win!</p>
+<p *ngIf="isUserLose()">You lose!</p>
