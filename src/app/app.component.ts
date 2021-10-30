@@ -7,6 +7,7 @@ import {Card, CardDeck} from "../lib/CardDeck";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'blackjack';
   cardDeck: CardDeck;
   cards: Card[];
   score = 0;
